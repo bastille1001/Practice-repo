@@ -14,8 +14,8 @@ namespace Nutshell.Study
         [Benchmark]
         public void Solution()
         {
-            List<Prices> priceRecords = ReadDataFromExcel<Prices>("");
-            List<Transactions> transactionRecords = ReadDataFromExcel<Transactions>(""); 
+            List<Prices> priceRecords = ReadDataFromExcel<Prices>("C:\\Users\\timur\\Downloads\\Prices.csv");
+            List<Transactions> transactionRecords = ReadDataFromExcel<Transactions>("C:\\Users\\timur\\Downloads\\Transactions.csv"); 
             var priceDict = priceRecords.ToDictionary(x => x.Key);
 
             List<ValuationModel> valuations = new(capacity: 1);
